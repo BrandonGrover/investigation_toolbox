@@ -1,9 +1,10 @@
 import json
 
+#API Keys
 with open ('api_keys.json', 'r') as f:
-    api_config = f.read()
-api_config = json.loads(api_config)
+    api_conf = f.read()
+api_conf = json.loads(api_conf)
 
-#configs
+#Request variables
 retry_attempts = 2
 request_timeout = 10
