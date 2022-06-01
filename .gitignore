@@ -6,6 +6,9 @@ __pycache__/
 #API Keys
 api_keys.json
 
+#Logs
+logs/error*
+
 # C extensions
 *.so
 
