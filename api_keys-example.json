@@ -1,0 +1,20 @@
+{ "api": {
+    "email_rep":{
+        "key": "",
+        "url": "https://emailrep.io/"
+    },
+    "abuse_ipdb":{
+        "key":"",
+        "url": "https://api.abuseipdb.com/api/v2/check"
+    },
+    "breach_directory":{
+        "key":"",
+        "url":"https://breachdirectory.p.rapidapi.com/",
+        "host":"breachdirectory.p.rapidapi.com"
+    },
+    "whois_lookup":{
+      "key":"",
+      "url":"https://api.ip2whois.com/v2"
+  }
+  }
+}
