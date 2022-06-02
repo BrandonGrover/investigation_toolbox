@@ -18,7 +18,7 @@
 
 ## About The Project
 
-<p>The goal of the project is to provide a comprehensive tool to allow for easier investigations into various types of incidents. Whatever the issue at hand, hopefully with the services API keys at hand, you can get all the contextual information that you need.</p>
+<p>The goal of the project is to provide a comprehensive tool to allow for easier investigations into various types of incidents. Whatever the issue at hand, hopefully, you can get all the contextual information that you need.</p>
 
 
 
