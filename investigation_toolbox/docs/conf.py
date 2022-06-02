@@ -1,7 +1,8 @@
 import json
+import os
 
 #API Keys
-with open ('api_keys.json', 'r') as f:
+with open ('investigation_toolbox/docs/api_keys.json', 'r') as f:
     api_conf = f.read()
 api_conf = json.loads(api_conf)
 
