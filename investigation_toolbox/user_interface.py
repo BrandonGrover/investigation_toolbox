@@ -1,7 +1,7 @@
 from investigation_toolbox.src.email.email_queries import email_queries
 from investigation_toolbox.src.hostname.hostname_queries import host_queries
 from investigation_toolbox.src.ipv4.ipv4_queries import ip_queries
-import logger
+from src.shared_functions import logger
 import os
 import docs.conf as conf
 
