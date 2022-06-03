@@ -32,13 +32,13 @@ while(run):
         user_email_input = input("What is the email address?: ")
         if email_selector == "1":
             print(conf.result)
-            email_rep_result = email_queries(user_email_input).email_rep()
-            print(email_rep_result)
+            email_result = email_queries(user_email_input).email_rep()
+            print(email_result)
             continue
         if email_selector == "2":
             print(conf.result)
-            email_breach_result = email_queries(user_email_input).breach_directory()
-            print(email_breach_result)
+            email_result = email_queries(user_email_input).breach_directory()
+            print(email_result)
             continue
         else:
             continue
@@ -48,13 +48,18 @@ while(run):
         print("IPv4 Query Options")
         print("#" * 120)
         print("1) Abuse IPDB")
+        print("2) Shodan Search")
         ip_selector = input("Choose an option: ")
         user_ipv4_input = input("What is the IPv4 address?: ")
         if ip_selector == "1":
             print(conf.result)
-            ipdb_ipv4_result = ip_queries(user_ipv4_input).abuse_ipdb()
-            print(ipdb_ipv4_result)
+            ip_result = ip_queries(user_ipv4_input).abuse_ipdb()
+            print(ip_result)
             continue
+        if ip_selector == "2":
+            print(conf.result)
+            ip_result = ip_queries(user_ipv4_input).shodan_ipv4()
+            print(ip_result)
         else:
             continue
     elif selector == "3":
@@ -62,19 +67,19 @@ while(run):
         print("#" * 120)
         print("Hostname Query Options")
         print("#" * 120)
-        print("1) Whois lookup")
-        print("2) Shodan search")
+        print("1) Whois Lookup")
+        print("2) Shodan Search")
         host_selector = input("Choose an option: ")
         user_host_input = input("What is the host name?: ")
         if host_selector == "1":
             print(conf.result)
-            whois_result = host_queries(user_host_input).whois_lookup()
-            print(whois_result)
+            hostname_result = host_queries(user_host_input).whois_lookup()
+            print(hostname_result)
             continue
         elif host_selector == "2":
             print(conf.result)
-            shodan_result = host_queries(user_host_input).shodan_host()
-            print(shodan_result)
+            hostname_result = host_queries(user_host_input).shodan_host()
+            print(hostname_result)
             continue
         else:
             continue
@@ -88,8 +93,8 @@ while(run):
         intel_input = input("What would you like to look up?: ")
         if intel_selector == "1":
             print(conf.result)
-            whois_result = host_queries(intel_input).whois_lookup()
-            print(whois_result)
+            intel_response = host_queries(intel_input).whois_lookup()
+            print(intel_response)
             continue
     elif selector == "5":
         break
