@@ -2,23 +2,28 @@ from src.email.email_queries import email_queries
 from src.hostname.hostname_queries import host_queries
 from src.ipv4.ipv4_queries import ip_queries
 from src.threat_intel.threat_intel import intel_queries
+from src.scan.scan_queries import scan_queries
+from src.modules.shodan import *
 from src.shared_functions import logger
 import docs.conf as conf
 import os
 
-
+#print(shodan(ipv4="45.223.18.234").shodan_scan())
+print(shodan().scan_status(id_='rnmUMG9VTeRotZ28'))
 #Menu
-os.system('cls')
-run = True
-print("#" * 120)
-print("#" * 40 + " " * 8 + " Investigation Toolbox " + " " * 8 + "#" * 41)
-while(run):
+#os.system('cls')
+run = False
+if run:
     print("#" * 120)
+    print("#" * 40 + " " * 8 + " Investigation Toolbox " + " " * 8 + "#" * 41)
+    print("#" * 120)
+while(run):
     print("1) Email Queries")
     print("2) IPv4 Queries")
     print("3) Hostname Queries")
     print("4) Threat Intelligence")
-    print("5) Exit")
+    print("5) Scanning")
+    print("6) Exit")
     print("#" * 120)
     selector = input("Choose an option: ")
     if selector == "1":
@@ -97,6 +102,26 @@ while(run):
             print(intel_response)
             continue
     elif selector == "5":
+        print()
+        print("#" * 120)
+        print("Scanning Options")
+        print("#" * 120)
+        print("1) On-Demand Shodan IP Scanning")
+        print("2) Shodan Scan List")
+        scan_selector = input("Choose an option: ")
+        if not scan_selector == "2":
+            scan_input = input("What IP would you like to look up?: ")
+        if scan_selector == "1":
+            print(conf.result)
+            scan_response = scan_queries(scan_input).shodan_scan()
+            print(scan_response)
+            continue
+        if scan_selector == "2":
+            print(conf.result)
+            scan_response = scan_queries().shodan_list()
+            print(scan_response)
+            continue
+    elif selector == "6":
         break
     else:
         continue

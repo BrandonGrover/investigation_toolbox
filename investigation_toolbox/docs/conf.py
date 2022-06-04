@@ -8,7 +8,7 @@ api_conf = json.loads(api_conf)
 
 #Request variables
 retry_attempts = 2
-request_timeout = 10
+request_timeout = 30
 
 #Output strings
 result = "#" * 120 + "\n" + "#" * 48 + " " * 8 + " Result " + " " * 8 + "#" * 48 + "\n" + "#" * 120
